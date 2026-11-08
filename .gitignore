@@ -1,0 +1,10 @@
+.DS_Store
+node_modules/
+.env
+.env.local
+**/.yarn/cache/
+**/.yarn/install-state.gz
+**/artifacts/
+**/cache/
+**/typechain-types/
+**/.next/
