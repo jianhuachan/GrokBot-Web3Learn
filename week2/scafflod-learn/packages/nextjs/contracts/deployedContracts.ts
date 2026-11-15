@@ -6,6 +6,39 @@ import { GenericContractsDeclaration } from "~~/utils/scaffold-eth/contract";
 
 const deployedContracts = {
   31337: {
+    SimpleStorage: {
+      address: "0x0165878a594ca255338adfa4d48449f69242eb8f",
+      abi: [
+        {
+          inputs: [],
+          name: "get",
+          outputs: [
+            {
+              internalType: "uint256",
+              name: "",
+              type: "uint256",
+            },
+          ],
+          stateMutability: "view",
+          type: "function",
+        },
+        {
+          inputs: [
+            {
+              internalType: "uint256",
+              name: "x",
+              type: "uint256",
+            },
+          ],
+          name: "set",
+          outputs: [],
+          stateMutability: "nonpayable",
+          type: "function",
+        },
+      ],
+      inheritedFunctions: {},
+      deployedOnBlock: 8,
+    },
     YourContract: {
       address: "0x5fbdb2315678afecb367f032d93f642f64180aa3",
       abi: [
