@@ -14,13 +14,13 @@ import "hardhat/console.sol";
  */
 contract YourContract {
     // State Variables
-    // 铸币者地址
+    // 合约拥有者地址（部署时设定，之后不能改）
     address public immutable owner;
     string public greeting = "Building Unstoppable Apps!!!";
     bool public premium = false;
-    // 当前的币
+    // greeting 被修改的总次数
     uint256 public totalCounter = 0;
-    // 用户的币的数量
+    // 每个地址修改 greeting 的次数
     mapping(address => uint) public userGreetingCounter;
 
     // Events: a way to emit log statements from smart contract that can be listened to by external parties
@@ -28,7 +28,7 @@ contract YourContract {
 
     // Constructor: Called once on contract deployment
     // Check packages/hardhat/deploy/00_deploy_your_contract.ts
-    // 部署后 实例构建, 铸币者地址赋值
+    // 部署时运行一次, 给合约拥有者地址赋值
     constructor(address _owner) {
         owner = _owner;
     }
